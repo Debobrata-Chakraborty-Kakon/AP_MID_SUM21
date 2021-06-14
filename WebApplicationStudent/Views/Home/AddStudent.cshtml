@@ -1,0 +1,25 @@
+﻿@model WebApplicationStudent.Models.Student
+@{
+    ViewBag.Title = "AddStudent";
+}
+
+<h3><a href="/Home/Dashboard" class="btn btn-primary">Dashboard</a></h3>
+<h2>@ViewBag.Message</h2>
+
+<form action="/Home/AddStudent" method="post" class="d-flex text-justify-content-center">
+    <input type="text" class="form-control" name="Name" placeholder="Name">
+    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+    <input type="text" class="form-control" name="Id" placeholder="Id">
+    @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+    <input type="date" class="form-control" name="DOB" placeholder="DOB">
+    @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
+    <input type="text" class="form-control" name="Cgpa" placeholder="CGPA">
+    @Html.ValidationMessageFor(model => model.Cgpa, "", new { @class = "text-danger" })
+    <input type="text" class="form-control" name="Credit" placeholder="Credit">
+    @Html.ValidationMessageFor(model => model.Credit, "", new { @class = "text-danger" })
+    <input type="text" class="form-control" name="DeptId" placeholder="Dept ID">
+    @Html.ValidationMessageFor(model => model.DeptId, "", new { @class = "text-danger" })
+    <input type="submit" class="btn btn-danger" value="Add">
+</form>
+
+

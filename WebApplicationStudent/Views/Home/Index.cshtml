@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<center>
+    <div class="d-flex justify-content-center">
+        <img src="https://portal.aiub.edu/Content/Images/aiub_logo_92x92.png"><br><br>
+        <form action=" " method="post">
+            <input type="text" name="Name" class="form-control" placeholder="ID"><br>
+            <input type="text" name="Password" class="form-control" placeholder="Password"><br>
+            <span class="text-warning">@TempData["ErrMsg"]</span>
+            <input type="submit" class="btn btn-block" value="Login">
+        </form>
+
+    </div>
+</center>
